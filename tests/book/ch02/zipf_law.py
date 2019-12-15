@@ -9,13 +9,13 @@ from collections import Counter
 
 import numpy as np
 
-from tests.test_utility import ensure_data
+from test_utility import ensure_data
 
 sighan05 = ensure_data('icwb2-data', 'http://sighan.cs.uchicago.edu/bakeoff2005/data/icwb2-data.zip')
 msr = os.path.join(sighan05, 'training', 'msr_training.utf8')
 
 f = Counter()
-with open(msr) as src:
+with open(msr,encoding='utf8') as src:
     for line in src:
         line = line.strip()
         for word in line.split('  '):

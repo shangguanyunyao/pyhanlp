@@ -10,8 +10,9 @@ from pyhanlp import *
 def main():
     HanLP.Config.enableDebug()
     #  为了避免你等得无聊，开启调试模式说点什么:-)
-    print(HanLP.segment("王国维和服务员"))
+    print(HanLP.segment(u"王国维和服务员"))
 
 
 if __name__ == '__main__':
     main()
+    
